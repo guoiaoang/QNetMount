@@ -6,25 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>520</width>
-    <height>579</height>
+    <width>386</width>
+    <height>586</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QNetMount</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_9">
+   <layout class="QGridLayout" name="gridLayoutCentral">
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidgetCentral">
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="index">
+      <widget class="QWidget" name="Index">
        <attribute name="title">
         <string>首页</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_6">
+       <layout class="QGridLayout" name="gridLayoutIndex">
         <item row="1" column="0">
          <spacer name="verticalSpacerIndexBellow">
           <property name="orientation">
@@ -121,7 +121,7 @@
               <property name="styleSheet">
                <string notr="true">background-color: rgb(35, 35, 36);</string>
               </property>
-              <layout class="QGridLayout" name="gridLayout_3">
+              <layout class="QGridLayout" name="gridLayoutIndexStorage">
                <item row="0" column="0">
                 <widget class="QLabel" name="labelIndexStroageTitle">
                  <property name="text">
@@ -144,6 +144,9 @@
                </item>
                <item row="1" column="0">
                 <widget class="QToolButton" name="toolButtonIndexStroageAdd">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="text">
                   <string>添加</string>
                  </property>
@@ -177,7 +180,7 @@
               <property name="styleSheet">
                <string notr="true">background-color: rgb(35, 35, 36);</string>
               </property>
-              <layout class="QGridLayout" name="gridLayout_4">
+              <layout class="QGridLayout" name="gridLayoutIndexMount">
                <item row="0" column="0">
                 <widget class="QLabel" name="labelIndexMountTitle">
                  <property name="text">
@@ -200,6 +203,9 @@
                </item>
                <item row="1" column="0">
                 <widget class="QToolButton" name="toolButtonIndexMountAdd">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="text">
                   <string>添加</string>
                  </property>
@@ -233,7 +239,7 @@
               <property name="styleSheet">
                <string notr="true">background-color: rgb(35, 35, 36);</string>
               </property>
-              <layout class="QGridLayout" name="gridLayout_5">
+              <layout class="QGridLayout" name="gridLayoutIndexTask">
                <item row="0" column="0">
                 <widget class="QLabel" name="labelIndexTaskTitle">
                  <property name="text">
@@ -256,6 +262,9 @@
                </item>
                <item row="1" column="0">
                 <widget class="QToolButton" name="toolButtonIndexTaskAdd">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="text">
                   <string>添加</string>
                  </property>
@@ -291,7 +300,7 @@
             <property name="styleSheet">
              <string notr="true">background-color: rgb(35, 35, 36);</string>
             </property>
-            <layout class="QGridLayout" name="gridLayout_2">
+            <layout class="QGridLayout" name="gridLayoutIndexTrans">
              <item row="1" column="0">
               <widget class="QLabel" name="labelIndexTransSpeedUp">
                <property name="text">
@@ -353,25 +362,28 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="store">
+      <widget class="QWidget" name="Storage">
        <attribute name="title">
         <string>存储</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout">
+       <layout class="QGridLayout" name="gridLayoutStorage">
         <item row="0" column="0">
          <widget class="QTabWidget" name="tabWidgetStore">
           <property name="currentIndex">
            <number>0</number>
           </property>
-          <widget class="QWidget" name="manager">
+          <widget class="QWidget" name="Manager">
            <attribute name="title">
             <string>管理</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <layout class="QVBoxLayout" name="verticalLayoutManager">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayoutManager">
               <item>
                <widget class="QToolButton" name="toolButtonManagerAdd">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="text">
                  <string>添加</string>
                 </property>
@@ -379,6 +391,9 @@
               </item>
               <item>
                <widget class="QToolButton" name="toolButtonManagerReload">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
                 <property name="text">
                  <string>刷新</string>
                 </property>
@@ -415,7 +430,7 @@
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="browser">
+          <widget class="QWidget" name="Browser">
            <attribute name="title">
             <string>浏览</string>
            </attribute>
@@ -424,15 +439,18 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="mount">
+      <widget class="QWidget" name="Mount">
        <attribute name="title">
         <string>挂载</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_3">
+       <layout class="QVBoxLayout" name="verticalLayoutMount">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayoutMount">
           <item>
            <widget class="QToolButton" name="toolButtonMountAdd">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>添加</string>
             </property>
@@ -440,6 +458,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="toolButtonMountReload">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>刷新</string>
             </property>
@@ -476,20 +497,23 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="trans">
+      <widget class="QWidget" name="Trans">
        <attribute name="title">
         <string>传输</string>
        </attribute>
       </widget>
-      <widget class="QWidget" name="task">
+      <widget class="QWidget" name="Task">
        <attribute name="title">
         <string>任务</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_4">
+       <layout class="QVBoxLayout" name="verticalLayoutTask">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayoutTask">
           <item>
            <widget class="QToolButton" name="toolButtonTaskAdd">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>添加</string>
             </property>
@@ -497,6 +521,9 @@
           </item>
           <item>
            <widget class="QToolButton" name="toolButtonTaskReload">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
             <property name="text">
              <string>刷新</string>
             </property>
@@ -533,30 +560,162 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="setting">
+      <widget class="QWidget" name="Setting">
        <attribute name="title">
         <string>设置</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_8">
-        <item row="3" column="0">
-         <spacer name="verticalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+       <layout class="QGridLayout" name="gridLayoutSetting">
+        <item row="2" column="0">
+         <widget class="QWidget" name="widgetSettingAbout" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(35, 35, 36);</string>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
+          <layout class="QVBoxLayout" name="verticalLayoutSettingAbout">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayoutSettingAboutTitle">
+             <item>
+              <spacer name="horizontalSpacerSettingAboutTitleLeft">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelSettingAboutTitle">
+               <property name="text">
+                <string>关于</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacerSettingAboutTitleRigth">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QWidget" name="widgetSettingAboutInfo" native="true">
+             <layout class="QVBoxLayout" name="verticalLayoutSettingAboutInfo">
+              <item>
+               <widget class="QLabel" name="labelSettingAboutInfo">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;版本: v1.1.1&lt;/p&gt;
+&lt;p&gt;由独立开发者 VirtualHotBar 开发并发布&lt;/p&gt;
+&lt;p&gt;Copyright © 2024-Present &lt;a href=&quot;https://blog.hotpe.top&quot;&gt;VirtualHotBar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.hotpe.top&quot;&gt;NetMount&lt;/a&gt; | &lt;a href=&quot;https://api.hotpe.top/API/NetMount/GoLink?id=docs&amp;path=&quot;&gt;文档&lt;/a&gt; | &lt;a href=&quot;https://docs.netmount.cn/license&quot;&gt;许可证&lt;/a&gt;&lt;/p&gt;
+</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>true</bool>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+                <property name="openExternalLinks">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QWidget" name="widgetSettingLibs" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(35, 35, 36);</string>
           </property>
-         </spacer>
+          <layout class="QVBoxLayout" name="verticalLayoutSettingLibs">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayoutSettingLibsTitle">
+             <item>
+              <spacer name="horizontalSpacerSettingLibsTitleLeft">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelSettingLibsTitle">
+               <property name="text">
+                <string>组件</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacerSettingLibsTitleRight">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QWidget" name="widgetSettingLibsTitleInfo" native="true">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayoutSettingLibsTitleInfo">
+              <item>
+               <widget class="QLabel" name="labelSettingLibsTitleInfo">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;body&gt;&lt;a href=&quot;https://github.com/rclone/rclone&quot;  &gt;Rclone&lt;/a&gt;(&lt;a href=&quot;www&quot;&gt;日志&lt;/a&gt;):v1.66.0&lt;br/&gt;&lt;a href=&quot;https://github.com/alist-org/alist&quot;&gt;Alist &lt;/a&gt;(&lt;a href=&quot;www&quot;&gt;日志&lt;/a&gt;):v3.35.0&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
         <item row="0" column="0">
          <widget class="QWidget" name="widgetSetting" native="true">
           <property name="styleSheet">
            <string notr="true">background-color: rgb(35, 35, 36);</string>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_8">
+          <layout class="QVBoxLayout" name="verticalLayoutSetting">
            <item>
             <layout class="QHBoxLayout" name="horizontalLayoutSettingTitle">
              <item>
@@ -628,6 +787,9 @@
                </item>
                <item row="1" column="1">
                 <widget class="QComboBox" name="comboBoxSettingCtrlTheme">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <item>
                   <property name="text">
                    <string>跟随系统</string>
@@ -673,6 +835,9 @@
                </item>
                <item row="0" column="1">
                 <widget class="QComboBox" name="comboBoxSettingCtrlLanguage">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="currentText">
                   <string>简体中文</string>
                  </property>
@@ -698,6 +863,9 @@
                </item>
                <item row="2" column="1">
                 <widget class="QCheckBox" name="checkBoxSettingCtrlAutoStart">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
                  <property name="text">
                   <string/>
                  </property>
@@ -781,144 +949,18 @@
           </layout>
          </widget>
         </item>
-        <item row="2" column="0">
-         <widget class="QWidget" name="widgetSettingAbout" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(35, 35, 36);</string>
+        <item row="3" column="0">
+         <spacer name="verticalSpacerSettingBellow">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_12">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayoutSettingAbout">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayoutSettingAboutTitle">
-               <item>
-                <spacer name="horizontalSpacerSettingAboutTitleLeft">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="labelSettingAboutTitle">
-                 <property name="text">
-                  <string>关于</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacerSettingAboutTitleRigth">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QWidget" name="widgetSettingAboutInfo" native="true">
-               <layout class="QVBoxLayout" name="verticalLayout_5">
-                <item>
-                 <widget class="QLabel" name="labelSettingAboutInfo">
-                  <property name="text">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;p&gt;版本: v1.1.1&lt;/p&gt;
-&lt;p&gt;由独立开发者 VirtualHotBar 开发并发布&lt;/p&gt;
-&lt;p&gt;Copyright © 2024-Present &lt;a href=&quot;www&quot;&gt;VirtualHotBar&lt;/a&gt;&lt;/p&gt;</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="1" column="0">
-         <widget class="QWidget" name="widgetSettingLibs" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(35, 35, 36);</string>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_11">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayoutSettingLibs">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayoutSettingLibsTitle">
-               <item>
-                <spacer name="horizontalSpacerSettingLibsTitleLeft">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="labelSettingLibsTitle">
-                 <property name="text">
-                  <string>组件</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <spacer name="horizontalSpacerSettingLibsTitleRight">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <widget class="QWidget" name="widgetSettingLibsTitleInfo" native="true">
-               <layout class="QVBoxLayout" name="verticalLayout_9">
-                <item>
-                 <widget class="QLabel" name="labelSettingLibsTitleInfo">
-                  <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;www&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Rclone&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Inter','-apple-system','BlinkMacSystemFont','PingFang SC','Hiragino Sans GB','noto sans','Microsoft YaHei','Helvetica Neue','Helvetica','Arial','sans-serif'; font-size:14px; color:rgba(255,255,255,0.698039); background-color:#232324;&quot;&gt;(&lt;/span&gt;&lt;a href=&quot;www&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;日志&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Inter','-apple-system','BlinkMacSystemFont','PingFang SC','Hiragino Sans GB','noto sans','Microsoft YaHei','Helvetica Neue','Helvetica','Arial','sans-serif'; font-size:14px; color:rgba(255,255,255,0.698039); background-color:#232324;&quot;&gt;): v1.66.0&lt;/span&gt;&lt;br/&gt;&lt;a href=&quot;www&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alist&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Inter','-apple-system','BlinkMacSystemFont','PingFang SC','Hiragino Sans GB','noto sans','Microsoft YaHei','Helvetica Neue','Helvetica','Arial','sans-serif'; font-size:14px; color:rgba(255,255,255,0.698039); background-color:#232324;&quot;&gt;(&lt;/span&gt;&lt;a href=&quot;www&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;日志&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Inter','-apple-system','BlinkMacSystemFont','PingFang SC','Hiragino Sans GB','noto sans','Microsoft YaHei','Helvetica Neue','Helvetica','Arial','sans-serif'; font-size:14px; color:rgba(255,255,255,0.698039); background-color:#232324;&quot;&gt;): v3.35.0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                  <property name="textFormat">
-                   <enum>Qt::AutoText</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -926,7 +968,7 @@
        <attribute name="title">
         <string>Alist</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QVBoxLayout" name="verticalLayoutAlist">
         <item>
          <layout class="QVBoxLayout" name="verticalLayoutAlistMain">
           <item>
@@ -1060,7 +1102,7 @@
           <item>
            <widget class="QLabel" name="labelAlistPassWord">
             <property name="text">
-             <string>设置密码</string>
+             <string>设置密码 : </string>
             </property>
            </widget>
           </item>
@@ -1100,7 +1142,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>520</width>
+     <width>386</width>
      <height>20</height>
     </rect>
    </property>

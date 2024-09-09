@@ -13,7 +13,7 @@
 
 Alist 是一个很好用的服务端，设置非常简单，功能却十分强大。但是官方不对免费用户提供图形化的服务端管理界面。
 
-NetMount 项目把 Alist 和 RcClone 集成到了一起，做了个图形化的服务端管理界面，是我日常使用的一个程序。
+[NetMount](https://github.com/VirtualHotBar/NetMount/) 项目把 [Alist](https://github.com/alist-org/alist) 和 [RcClone](https://github.com/rclone/rclone) 集成到了一起，做了个图形化的服务端管理界面，是我日常使用的一个程序。
 
 但是， NetMount 每次启动时都会把管理员密码设置为随机的字符串，而手动更改 Alist 的密码又会导致 Token 出现问题。
 
@@ -40,8 +40,8 @@ NetMount 项目把 Alist 和 RcClone 集成到了一起，做了个图形化的�
     - Alist
         - 自定义 Alist 程序路径
         - 自定义 Alist 数据路径
+        - 可在该界面对 Alist 服务进行启动及停止的操作
         - 在当前客户端内修改管理员密码（由于Alist限制，只允许修改不允许查看）
-
 
 ## 与 NetMount 区别
 
@@ -51,4 +51,6 @@ NetMount 项目把 Alist 和 RcClone 集成到了一起，做了个图形化的�
 由于 NetMount 中 Alist 的配置文件 `config.json` 中路径为固定路径，不便于便携运行，因此程序在运行时会替换其中的路径到配置路径下。
 （就是由于 NetMount 与 官方的 Alist 不兼容，比如官方支持便携式运行，NetMount 成了安装式，最后只能自动动手丰衣足食了）
 
-NetMount 启动 Alist 使用的是 `alist server` 命令，不会在 Windows 上生成 `pid` 文件，无法使用 `alist stop` 停止服务，因此此项目使用 `alist start` 启动服务。
+~~NetMount 启动 Alist 使用的是 `alist server` 命令，不会在 Windows 上生成 `pid` 文件，无法使用 `alist stop` 停止服务，因此此项目使用 `alist start` 启动服务。~~
+
+修改 Alist 启动命令为 `alist server` 。 `alist start` 启动服务时会启动中间程序，退出 `alist server` 程序，导致进程父子关系断开，无法使用 `alist stop` 命令停止服务，无法监控服务运行状态。
